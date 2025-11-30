@@ -1,0 +1,172 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brewed — Modern Coffee Shop</title>
+  <meta name="description" content="Modern coffee shop landing page with specialty menu, story, locations, and online ordering call-to-action." />
+  <link rel="canonical" href="https://yourusername.github.io/coffee-shop/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brewed — Modern Coffee Shop" />
+  <meta property="og:description" content="Specialty coffee, fresh pastries, and seasonal drinks. Visit us or order online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/hero.svg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Page wrapper -->
+  <div class="page" data-js="page">
+    <!-- Header / Navigation -->
+    <header class="header" role="banner">
+      <div class="container header__inner">
+        <a class="logo" href="#hero" aria-label="Go to home">Brewed<span class="logo__dot">.</span></a>
+
+        <nav class="nav" aria-label="Primary">
+          <button id="navToggle" class="nav__toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+            <span class="nav__bar"></span><span class="nav__bar"></span><span class="nav__bar"></span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a class="nav__link" href="#menu">Menu</a></li>
+            <li><a class="nav__link" href="#story">Our Story</a></li>
+            <li><a class="nav__link" href="#locations">Locations</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__cta">
+          <button id="themeToggle" class="btn btn--ghost" aria-label="Toggle dark mode" title="Toggle dark mode">Dark</button>
+          <a class="btn btn--primary" href="#menu">Order Now</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 id="heroTitle" class="hero__title">Roasted Daily. Poured with Care.</h1>
+          <p class="hero__subtitle">Specialty coffee, seasonal drinks, and fresh-baked pastries. Drop by or order ahead.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#menu">Explore Menu</a>
+            <a class="btn" href="#story">Learn More</a>
+          </div>
+          <ul class="hero__stats" aria-label="Highlights">
+            <li>Single-origin beans</li>
+            <li>Barista champions</li>
+            <li>Plant-based milk options</li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <img src="assets/images/hero.svg" alt="Coffee cup with latte art" width="1600" height="900" loading="eager" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section section--alt" aria-labelledby="menuTitle">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="menuTitle" class="section__title">Signature Menu</h2>
+          <p class="section__subtitle">Curated classics and seasonal specialties. Brewed to perfection.</p>
+        </header>
+
+        <div id="menuGrid" class="grid grid--cards" aria-live="polite">
+          <!-- Cards injected by script.js -->
+        </div>
+
+        <div class="section__foot">
+          <a href="#contact" class="btn btn--secondary">Ask About Catering</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="section" aria-labelledby="storyTitle">
+      <div class="container story__grid">
+        <figure class="story__media">
+          <img src="assets/images/beans.svg" alt="Roasted coffee beans" width="1600" height="900" loading="lazy" />
+        </figure>
+        <div class="story__content">
+          <h2 id="storyTitle" class="section__title">From Farm to Cup</h2>
+          <p>We partner with small producers to source ethically grown, single-origin beans. Our roastery focuses on balanced profiles that highlight terroir and sweetness.</p>
+          <ul class="list">
+            <li>Direct trade sourcing</li>
+            <li>Seasonal roasting profiles</li>
+            <li>Compostable packaging</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations -->
+    <section id="locations" class="section section--alt" aria-labelledby="locTitle">
+      <div class="container">
+        <header class="section__head">
+          <h2 id="locTitle" class="section__title">Visit Us</h2>
+          <p class="section__subtitle">Three city hubs with early hours and weekend pop-ups.</p>
+        </header>
+
+        <div class="grid grid--locations">
+          <article class="loc">
+            <h3 class="loc__title">Downtown</h3>
+            <p class="loc__meta">Mon–Fri 7:00–19:00 · Sat–Sun 8:00–18:00</p>
+            <p class="loc__desc">Spacious bar, pour-over station, and pastry counter.</p>
+          </article>
+          <article class="loc">
+            <h3 class="loc__title">Riverside</h3>
+            <p class="loc__meta">Daily 7:00–18:00</p>
+            <p class="loc__desc">Cozy nook with outdoor seating and weekend music.</p>
+          </article>
+          <article class="loc">
+            <h3 class="loc__title">Uptown</h3>
+            <p class="loc__meta">Mon–Fri 7:30–18:30 · Sat 8:00–17:00</p>
+            <p class="loc__desc">Espresso lab and seasonal tasting flights.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="section" aria-labelledby="newsTitle">
+      <div class="container newsletter">
+        <h2 id="newsTitle" class="section__title">Get the Monthly Roast</h2>
+        <p class="section__subtitle">Brewing tips, new beans, and events straight to your inbox.</p>
+        <form id="newsletterForm" class="form" novalidate>
+          <label class="sr-only" for="emailInput">Email address</label>
+          <input id="emailInput" class="input" type="email" placeholder="Enter your email" required />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+          <p id="formMsg" class="form__msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="#hero">Brewed<span class="logo__dot">.</span></a>
+          <p class="muted">Specialty coffee and pastries. Proudly independent.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#menu" class="footer__link">Menu</a>
+          <a href="#story" class="footer__link">Our Story</a>
+          <a href="#locations" class="footer__link">Locations</a>
+          <a href="#newsletter" class="footer__link">Newsletter</a>
+        </nav>
+        <div class="footer__meta">
+          <p>&copy; <span id="year"></span> Brewed Coffee Co.</p>
+          <p><a class="footer__link" href="#" aria-disabled="true">Privacy</a> · <a class="footer__link" href="#" aria-disabled="true">Terms</a></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
